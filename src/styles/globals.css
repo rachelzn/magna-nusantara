@@ -1,0 +1,39 @@
+/* Hide scrollbar by default */
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive helpers */
+@media (max-width: 900px) {
+  .flex-col {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Product grid collapses to 2 cols on tablet */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Product grid collapses to 1 col on mobile */
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Selection color */
+::selection {
+  background: #C9A56A;
+  color: #F8F4EE;
+}
